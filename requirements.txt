@@ -1,5 +1,6 @@
 torch
-librosa
+librosa==0.6
 pyyaml
 scipy
 argparse
+numba==0.48
