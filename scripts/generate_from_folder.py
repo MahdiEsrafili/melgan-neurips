@@ -26,7 +26,7 @@ def main():
         wavname = fname.name
         wav, sr = librosa.core.load(fname)
 
-        mel, _ = vocoder(torch.from_numpy(wav)[None])
+        mel = vocoder(torch.from_numpy(wav)[None])
         recons = vocoder.inverse(mel).squeeze().cpu().numpy()
 
         librosa.output.write_wav(args.save_path / wavname, recons, sr=sr)
