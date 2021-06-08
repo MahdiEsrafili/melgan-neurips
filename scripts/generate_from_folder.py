@@ -18,7 +18,7 @@ def parse_args():
 
 def main():
     args = parse_args()
-    vocoder = MelVocoder(args.load_path)
+    vocoder = MelVocoder(args.load_path, github=True)
 
     args.save_path.mkdir(exist_ok=True, parents=True)
 
